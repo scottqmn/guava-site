@@ -1,0 +1,33 @@
+@import './reset.scss';
+@import './colors.scss';
+@import './containers.scss';
+@import './typography.scss';
+
+:root {
+    // Colors
+    --black: #000000;
+    --grey: #fbfbfd;
+    --white: #fbfbfd;
+    --link: #0066cc;
+    // Fonts
+    --sans-serif: 'Open Sans', 'Arial', sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans-serif);
+    color: var(--black);
+    background: var(--white);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}

@@ -1,0 +1,50 @@
+%heading {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+}
+
+%subheading {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+%body {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+%button {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.t-heading {
+    @extend %heading;
+}
+
+.t-subheading {
+    @extend %subheading;
+}
+
+.t-body {
+    @extend %body;
+}
+
+.t-button {
+    @extend %button;
+}
+
+// Forms
+input,
+textarea {
+    @extend %body;
+}
+
+button,
+select,
+label,
+.button {
+    @extend %button;
+}
