@@ -1,0 +1,23 @@
+.section {
+    &:not(:first-child) {
+        margin-top: 5px;
+    }
+}
+
+.colors {
+    display: flex;
+    margin-top: -5px;
+    margin-left: -5px;
+
+    & > * {
+        margin-top: 5px;
+        margin-left: 5px;
+        padding: 5px;
+    }
+}
+
+.types {
+    & > *:not(:first-child) {
+        margin-top: 10px;
+    }
+}

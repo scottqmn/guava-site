@@ -2,14 +2,30 @@
     color: var(--black);
 }
 
+.bg-black {
+    background-color: var(--black);
+}
+
 .c-grey {
     color: var(--grey);
+}
+
+.bg-grey {
+    background-color: var(--grey);
 }
 
 .c-white {
     color: var(--white);
 }
 
+.bg-white {
+    background-color: var(--white);
+}
+
 .c-link {
     color: var(--link);
+}
+
+.bg-link {
+    background-color: var(--link);
 }
