@@ -2,7 +2,23 @@ import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import styles from '../styles/components/Hero.module.scss'
 
+// helper function, hypothetical: only used in some cases
+export const formatYell = (str) => {
+    // Check if str has .toUpperCase
+    const hasToUpperCase = str.toUpperCase
+
+    if (hasToUpperCase) {
+        return str.toUpperCase()
+    }
+
+    // otherwise, return unformatted
+    return str
+    // return str?.toUpperCase() || str
+}
+
+// React component, hypothetical: always used
 const Hero = (props) => {
+    // object destructuring
     const { heading, caption, dark, body, image } = props
 
     return (
