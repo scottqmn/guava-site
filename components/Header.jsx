@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import clsx from 'clsx'
 import styles from '../styles/components/Header.module.scss'
 
@@ -16,21 +17,19 @@ const Header = () => {
                 {links.map((linkData) => {
                     const { href, name, image } = linkData
                     return (
-                        <a
-                            key={name}
-                            href={href}
-                            className={clsx(styles.links, 't-button')}
-                        >
-                            {image ? (
-                                <img
-                                    className={styles.icon}
-                                    src={image}
-                                    alt={name}
-                                />
-                            ) : (
-                                name
-                            )}
-                        </a>
+                        <Link key={name} href={href}>
+                            <a className={clsx(styles.links, 't-button')}>
+                                {image ? (
+                                    <img
+                                        className={styles.icon}
+                                        src={image}
+                                        alt={name}
+                                    />
+                                ) : (
+                                    name
+                                )}
+                            </a>
+                        </Link>
                     )
                 })}
             </div>
