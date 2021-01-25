@@ -5,10 +5,10 @@ const Header = () => {
     const links = [
         { href: '/', name: 'Home', image: '/images/icon.png' },
         {
-            href: 'https://www.google.com',
-            name: 'Google',
+            href: '/products',
+            name: 'Products',
         },
-        { href: 'https://www.apple.com/', name: 'Apple' },
+        { href: '/styleguide', name: 'Styleguide' },
     ]
     return (
         <div className={clsx(styles.container, 'outer')}>

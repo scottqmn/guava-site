@@ -34,8 +34,6 @@ export default function Home() {
     ]
     return (
         <div className={styles.container}>
-            <Header />
-
             <h1 className='t-heading'>Homepage</h1>
             {content.map((heroData) => {
                 const { heading, caption, body, dark, image } = heroData
