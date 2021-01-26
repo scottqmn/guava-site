@@ -12,28 +12,35 @@ const Header = () => {
         { href: '/styleguide', name: 'Styleguide' },
     ]
     return (
-        <div className={clsx(styles.container, 'outer')}>
-            <div className={clsx(styles.linkContainer, 'inner')}>
-                {links.map((linkData) => {
-                    const { href, name, image } = linkData
-                    return (
-                        <Link key={name} href={href}>
-                            <a className={clsx(styles.links, 't-button')}>
-                                {image ? (
-                                    <img
-                                        className={styles.icon}
-                                        src={image}
-                                        alt={name}
-                                    />
-                                ) : (
-                                    name
-                                )}
-                            </a>
-                        </Link>
-                    )
-                })}
+        <>
+            <div className={clsx(styles.container, 'outer')}>
+                <div className={clsx(styles.linkContainer, 'inner')}>
+                    {links.map((linkData) => {
+                        const { href, name, image } = linkData
+                        return (
+                            <Link key={name} href={href}>
+                                <a className={clsx(styles.links, 't-button')}>
+                                    {image ? (
+                                        <img
+                                            className={styles.icon}
+                                            src={image}
+                                            alt={name}
+                                        />
+                                    ) : (
+                                        name
+                                    )}
+                                </a>
+                            </Link>
+                        )
+                    })}
+                </div>
             </div>
-        </div>
+            <div className={clsx(styles.banner, 'outer')}>
+                <div className={clsx(styles.bannerContainer, 'inner')}>
+                    COVID-19 Notice
+                </div>
+            </div>
+        </>
     )
 }
 
