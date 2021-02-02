@@ -46,20 +46,25 @@ export default function Home() {
     ]
     return (
         <div className={styles.container}>
-            {/* <h1 className='t-heading'></h1> */}
-            {content.map((heroData) => {
-                const { heading, caption, body, dark, image } = heroData
-                return (
-                    <Hero
-                        key={heading} // identifier for react to keep track of Hero components
-                        heading={heading}
-                        caption={caption}
-                        body={body}
-                        dark={dark}
-                        image={image}
-                    />
-                )
-            })}
+            <div className={styles.heroGrid}>
+                {content.map((heroData) => {
+                    const { heading, caption, body, dark, image } = heroData
+                    return (
+                        <div
+                            key={heading} // identifier for react to keep track of Hero components
+                            className={styles.heroGridItem}
+                        >
+                            <Hero
+                                heading={heading}
+                                caption={caption}
+                                body={body}
+                                dark={dark}
+                                image={image}
+                            />
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
