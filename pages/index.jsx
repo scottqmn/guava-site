@@ -42,13 +42,21 @@ export default function Home() {
             ),
             image: '/images/hero-3.png',
             dark: false,
+            bottomAlign: true,
         },
     ]
     return (
         <div className={styles.container}>
             <div className={styles.heroGrid}>
                 {content.map((heroData) => {
-                    const { heading, caption, body, dark, image } = heroData
+                    const {
+                        heading,
+                        caption,
+                        body,
+                        dark,
+                        image,
+                        bottomAlign,
+                    } = heroData
                     return (
                         <div
                             key={heading} // identifier for react to keep track of Hero components
@@ -60,6 +68,7 @@ export default function Home() {
                                 body={body}
                                 dark={dark}
                                 image={image}
+                                bottomAlign={bottomAlign}
                             />
                         </div>
                     )

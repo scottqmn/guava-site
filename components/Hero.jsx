@@ -19,7 +19,7 @@ export const formatYell = (str) => {
 // React component, hypothetical: always used
 const Hero = (props) => {
     // object destructuring
-    const { heading, caption, dark, body, image } = props
+    const { heading, caption, dark, body, image, bottomAlign } = props
 
     return (
         <div className={clsx(dark && 'bg-black c-white', 'outer')}>
@@ -45,7 +45,14 @@ const Hero = (props) => {
                         </a>
                     </div>
                 </div>
-                <img className={styles.img} src={image} alt='iphones' />
+                <img
+                    className={clsx(
+                        styles.img,
+                        bottomAlign && styles.bottomAlign
+                    )}
+                    src={image}
+                    alt='iphones'
+                />
             </div>
         </div>
     )
@@ -57,6 +64,7 @@ Hero.propTypes = {
     dark: PropTypes.bool,
     body: PropTypes.node,
     image: PropTypes.string,
+    bottomAlign: PropTypes.bool,
 }
 
 export default Hero
