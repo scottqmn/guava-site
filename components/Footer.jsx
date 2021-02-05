@@ -12,8 +12,8 @@ const Footer = () => {
     ]
     return (
         <>
-            <div className={clsx(styles.footer, 'outer')}>
-                <div className={clsx(styles.footerContainer, 'inner')}>
+            <div className={clsx(styles.outer, 'outer')}>
+                <div className={clsx(styles.Container, 'inner')}>
                     {links.map((linkData) => {
                         const { href, name } = linkData
                         return (
