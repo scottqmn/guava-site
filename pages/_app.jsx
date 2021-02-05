@@ -4,6 +4,7 @@ import 'normalize.css'
 import '../styles/main.scss'
 import metadata from '../constants/metadata'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function App({ Component, pageProps }) {
     return (
@@ -58,7 +59,9 @@ function App({ Component, pageProps }) {
                 <meta name='twitter:card' content='summary' />
             </Head>
             <Header />
+
             <Component {...pageProps} />
+            <Footer />
         </>
     )
 }
