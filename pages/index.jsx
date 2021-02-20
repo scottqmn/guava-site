@@ -1,10 +1,11 @@
 import Hero from '../components/Hero'
 import styles from '../styles/pages/Home.module.scss'
 
+// Page component (React component used by next js)
 export default function Home() {
     const content = [
         {
-            heading: 'iPhone 12',
+            heading: 'Nokia 21',
             caption: 'Blast past fast.',
             body: (
                 <>
@@ -17,7 +18,7 @@ export default function Home() {
             dark: false,
         },
         {
-            heading: 'iPhone 12 Pro',
+            heading: 'TCL 21',
             caption: "It's a leap year.",
             body: (
                 <>
@@ -29,23 +30,50 @@ export default function Home() {
             image: '/images/hero-2.png',
             dark: true,
         },
+        {
+            heading: 'Sidekick 21',
+            caption: 'Fast Blast to the Past',
+            body: (
+                <>
+                    From $63.82/mo. or $1299 before trade-in.
+                    <br />
+                    Buy directly from Apple with special carrier offers.
+                </>
+            ),
+            image: '/images/hero-3.png',
+            dark: false,
+            bottomAlign: true,
+        },
     ]
     return (
         <div className={styles.container}>
-            <h1 className='t-heading'>Homepage</h1>
-            {content.map((heroData) => {
-                const { heading, caption, body, dark, image } = heroData
-                return (
-                    <Hero
-                        key={heading} // identifier for react to keep track of Hero components
-                        heading={heading}
-                        caption={caption}
-                        body={body}
-                        dark={dark}
-                        image={image}
-                    />
-                )
-            })}
+            <div className={styles.heroGrid}>
+                {content.map((heroData) => {
+                    const {
+                        heading,
+                        caption,
+                        body,
+                        dark,
+                        image,
+                        bottomAlign,
+                    } = heroData
+                    return (
+                        <div
+                            key={heading} // identifier for react to keep track of Hero components
+                            className={styles.heroGridItem}
+                        >
+                            <Hero
+                                heading={heading}
+                                caption={caption}
+                                body={body}
+                                dark={dark}
+                                image={image}
+                                bottomAlign={bottomAlign}
+                            />
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

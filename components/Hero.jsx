@@ -2,8 +2,24 @@ import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import styles from '../styles/components/Hero.module.scss'
 
+// helper function, hypothetical: only used in some cases
+export const formatYell = (str) => {
+    // Check if str has .toUpperCase
+    const hasToUpperCase = str.toUpperCase
+
+    if (hasToUpperCase) {
+        return str.toUpperCase()
+    }
+
+    // otherwise, return unformatted
+    return str
+    // return str?.toUpperCase() || str
+}
+
+// React component, hypothetical: always used
 const Hero = (props) => {
-    const { heading, caption, dark, body, image } = props
+    // object destructuring
+    const { heading, caption, dark, body, image, bottomAlign } = props
 
     return (
         <div className={clsx(dark && 'bg-black c-white', 'outer')}>
@@ -29,7 +45,14 @@ const Hero = (props) => {
                         </a>
                     </div>
                 </div>
-                <img className={styles.img} src={image} alt='iphones' />
+                <img
+                    className={clsx(
+                        styles.img,
+                        bottomAlign && styles.bottomAlign
+                    )}
+                    src={image}
+                    alt='iphones'
+                />
             </div>
         </div>
     )
@@ -41,6 +64,7 @@ Hero.propTypes = {
     dark: PropTypes.bool,
     body: PropTypes.node,
     image: PropTypes.string,
+    bottomAlign: PropTypes.bool,
 }
 
 export default Hero

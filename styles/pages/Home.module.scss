@@ -1,3 +1,21 @@
+@import '../breakpoints';
+
 .container {
     min-height: 100vh;
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+
+    @media (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.heroGridItem:first-child {
+    @media (min-width: $md) {
+        grid-column: 1 / -1;
+    }
 }
