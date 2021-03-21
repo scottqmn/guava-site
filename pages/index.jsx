@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import styles from '../styles/pages/Home.module.scss'
 
 // Page component (React component used by next js)
-export default function Home() {
+const Home = () => {
     const content = [
         {
             heading: 'Nokia 21',
@@ -77,3 +77,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home
