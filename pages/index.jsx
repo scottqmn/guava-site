@@ -11,7 +11,7 @@ export default function Home() {
                 <>
                     From $29.12/mo. or $699 before trade-in.
                     <br />
-                    Buy directly from Apple with special carrier offers.
+                    Buy directly from Cat with special carrier offers.
                 </>
             ),
             image: '/images/hero-1.png',
