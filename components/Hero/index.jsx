@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import PropTypes from 'prop-types'
-import styles from '../styles/components/Hero.module.scss'
+import styles from './styles.module.scss'
 
 // helper function, hypothetical: only used in some cases
 export const formatYell = (str) => {

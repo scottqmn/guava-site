@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import clsx from 'clsx'
-import styles from '../styles/components/Header.module.scss'
+import styles from './styles.module.scss'
 
 export const HOME = {
     href: '/',

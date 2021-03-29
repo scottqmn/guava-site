@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import styles from '../styles/components/Styleguide.module.scss'
+import styles from './styles.module.scss'
 
 const Styleguide = () => {
     return (
