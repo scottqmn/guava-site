@@ -1,5 +1,4 @@
-import Hero from '../components/Hero'
-import styles from '../styles/pages/Home.module.scss'
+import HeroGrid from '../components/HeroGrid'
 
 // Page component (React component used by next js)
 const Home = () => {
@@ -45,37 +44,8 @@ const Home = () => {
             bottomAlign: true,
         },
     ]
-    return (
-        <div className={styles.container}>
-            <div className={styles.heroGrid}>
-                {content.map((heroData) => {
-                    const {
-                        heading,
-                        caption,
-                        body,
-                        dark,
-                        image,
-                        bottomAlign,
-                    } = heroData
-                    return (
-                        <div
-                            key={heading} // identifier for react to keep track of Hero components
-                            className={styles.heroGridItem}
-                        >
-                            <Hero
-                                heading={heading}
-                                caption={caption}
-                                body={body}
-                                dark={dark}
-                                image={image}
-                                bottomAlign={bottomAlign}
-                            />
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
-    )
+
+    return <HeroGrid content={content} />
 }
 
 export default Home

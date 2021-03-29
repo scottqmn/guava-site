@@ -1,8 +1,4 @@
-@import '../breakpoints';
-
-.container {
-    min-height: 100vh;
-}
+@import '../../styles/breakpoints';
 
 .heroGrid {
     display: grid;
