@@ -9,15 +9,20 @@
     --grey: #86868b;
     --white: #fbfbfd;
     --link: #0066cc;
+
+    --primary: #598000;
+    --secondary: #e60036;
+
     // Fonts
-    --sans-serif: 'Open Sans', 'Arial', sans-serif;
+    --heading: 'Fugaz One', 'Times New Roman', serif;
+    --body: 'Nunito', 'Arial', sans-serif;
 }
 
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: var(--sans-serif);
+    font-family: var(--body);
     font-size: 18px;
     color: var(--black);
     background: var(--white);

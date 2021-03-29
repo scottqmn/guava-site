@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import styles from '../styles/components/Footer.module.scss'
+import styles from './styles.module.scss'
 
 const Footer = () => {
     const links = [

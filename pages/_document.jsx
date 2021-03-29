@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
                     {/* Google Fonts */}
                     <link rel='preconnect' href='https://fonts.gstatic.com' />
                     <link
-                        href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap'
+                        href='https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito:ital,wght@0,600;0,900;1,600;1,900&display=swap'
                         rel='stylesheet'
                     />
                 </Head>
