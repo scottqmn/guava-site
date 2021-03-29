@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 import Hero from '../Hero'
 import styles from './styles.module.scss'
 
 // Page component (React component used by next js)
 const HeroGrid = ({ content }) => {
     return (
-        <div className={styles.container}>
+        <div className={clsx(styles.container, 'full-width')}>
             <div className={styles.heroGrid}>
                 {content.map((heroData) => {
                     const {
