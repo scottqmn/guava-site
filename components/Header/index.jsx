@@ -5,25 +5,30 @@ import styles from './styles.module.scss'
 
 export const HOME = {
     href: '/',
-    name: 'Guava Shop',
+    name: 'Guava',
     icon: '/images/icon.png',
     alt: 'guava logo',
 }
 
 export const LINKS = [
     {
+        href: '/',
+        name: 'Home',
+    },
+    {
         href: '/about',
         name: 'About',
     },
     {
-        href: '/products',
-        name: 'Products',
+        href: '/work',
+        name: 'Work',
     },
+    { href: '/styleguide', name: 'Styleguide' },
     {
         href: '/contact',
         name: 'Contact',
+        border: true,
     },
-    { href: '/styleguide', name: 'Styleguide' },
 ]
 
 const Header = () => {
@@ -43,7 +48,7 @@ const Header = () => {
             </Link>
             <div className={styles.nav}>
                 <div className={clsx(styles.linkContainer, 'inner')}>
-                    {LINKS.map(({ href, name }) => {
+                    {LINKS.map(({ href, name, border }) => {
                         const isActive = router.pathname === href
                         return (
                             <Link key={name} href={href}>
@@ -51,6 +56,7 @@ const Header = () => {
                                     className={clsx(
                                         styles.link,
                                         isActive && styles.isActive,
+                                        border && styles.border,
                                         't-button'
                                     )}
                                 >
