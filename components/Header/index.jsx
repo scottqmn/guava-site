@@ -38,9 +38,7 @@ const Header = () => {
                         src={HOME.icon}
                         alt={HOME.alt}
                     />
-                    <div className={clsx(styles.name, 't-heading')}>
-                        {HOME.name}
-                    </div>
+                    <div className={clsx(styles.name, 't-h1')}>{HOME.name}</div>
                 </a>
             </Link>
             <div className={styles.nav}>

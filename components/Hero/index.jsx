@@ -24,12 +24,10 @@ const Hero = (props) => {
     return (
         <div className={clsx(dark && 'bg-black c-white', 'outer')}>
             <div className={clsx(styles.content, 'inner')}>
-                <h2 className={clsx(styles.heading, 't-heading', 't-center')}>
+                <h2 className={clsx(styles.heading, 't-h1', 't-center')}>
                     {heading}
                 </h2>
-                <div
-                    className={clsx(styles.caption, 't-subheading', 't-center')}
-                >
+                <div className={clsx(styles.caption, 't-h2', 't-center')}>
                     {caption}
                 </div>
                 <p className={clsx(styles.body, 't-body t-center c-grey')}>
