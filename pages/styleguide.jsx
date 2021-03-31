@@ -3,7 +3,7 @@ import Styleguide from '../components/Styleguide'
 const StyleguidePage = () => {
     return (
         <div>
-            <h1 className='t-heading'>Styleguide</h1>
+            <h1 className='t-h1'>Styleguide</h1>
             <Styleguide />
         </div>
     )
