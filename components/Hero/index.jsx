@@ -22,8 +22,8 @@ const Hero = (props) => {
     const { heading, caption, dark, body, image, bottomAlign } = props
 
     return (
-        <div className={clsx(dark && 'bg-black c-white', 'outer')}>
-            <div className={clsx(styles.content, 'inner')}>
+        <div className={clsx(dark && 'bg-black c-white')}>
+            <div className={styles.content}>
                 <h2 className={clsx(styles.heading, 't-h1', 't-center')}>
                     {heading}
                 </h2>

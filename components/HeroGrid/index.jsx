@@ -23,12 +23,13 @@ const HeroGrid = ({ content }) => {
                             className={styles.heroGridItem}
                         >
                             <Hero
-                                heading={heading}
-                                caption={caption}
-                                body={body}
-                                dark={dark}
-                                image={image}
-                                bottomAlign={bottomAlign}
+                                {...heroData}
+                                // heading={heading}
+                                // caption={caption}
+                                // body={body}
+                                // dark={dark}
+                                // image={image}
+                                // bottomAlign={bottomAlign}
                             />
                         </div>
                     )
