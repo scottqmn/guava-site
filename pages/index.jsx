@@ -1,5 +1,16 @@
 import HeroGrid from '../components/HeroGrid'
+import AboutComponent from '../components/AboutComponent'
 
+const Home = () => {
+    return (
+        <div>
+            <AboutComponent />
+        </div>
+    )
+}
+export default Home
+
+/*
 // Page component (React component used by next js)
 const Home = () => {
     const content = [
@@ -49,3 +60,4 @@ const Home = () => {
 }
 
 export default Home
+*/
