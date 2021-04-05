@@ -1,0 +1,57 @@
+.menuLine {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    margin-bottom: 13px;
+}
+.menu {
+    width: 92px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+}
+.line {
+    width: 757px;
+    border: 1px solid #000000;
+}
+.lineAlign {
+    display: flex;
+    align-items: center;
+}
+.gridItem {
+    background-color: rgba(166, 247, 179, 1);
+    height: 400px;
+    width: 292.39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 0px 120px;
+}
+.imgSize {
+    height: 202px;
+    width: 182px;
+}
+.image {
+    display: flex;
+    justify-content: center;
+}
+.buttonRight {
+    display: flex;
+    justify-content: flex-end;
+}
+.button {
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    width: 128.44px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3e3f43;
+}
+.grid {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(3, 1fr);
+}
