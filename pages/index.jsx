@@ -14,7 +14,7 @@ const Home = () => {
                 </>
             ),
             image: '/images/hero-1.png',
-            dark: false,
+            // dark: false,
         },
         {
             heading: 'TCL 21',
@@ -40,15 +40,33 @@ const Home = () => {
                 </>
             ),
             image: '/images/hero-3.png',
-            dark: false,
+            // dark: false,
             bottomAlign: true,
+        },
+    ]
+
+    const menuContent = [
+        {
+            header: 'Fruit',
+            image: '/images/menu-1.png',
+            color: 'rgba(166, 247, 179, 1)',
+        },
+        {
+            header: 'All Fruit',
+            image: '/images/menu-2.png',
+            color: 'rgba(249,189,189,1)',
+        },
+        {
+            header: 'Not Fruit',
+            image: '/images/menu-3.png',
+            color: 'rgba(168,220,236,1)',
         },
     ]
 
     return (
         <>
             <HeroGrid content={content} />
-            <Menu />
+            <Menu content={menuContent} />
         </>
     )
 }
