@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div>
             <h1 className={clsx(styles.title, 't-h2')}>About</h1>
-            <div className={clsx(styles.container, 'inner')}>
+            <div className={styles.container}>
                 <div className={styles.myImage}>
                     <img src='images/guava-9.png' alt='Three guava fruit' />
                 </div>
