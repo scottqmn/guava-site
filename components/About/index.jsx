@@ -12,7 +12,7 @@ const About = (props) => {
                 </div>
                 <div className={styles.text}>
                     <p className={clsx(styles.caption, 't-h2')}>
-                        {props.caption}
+                        {props.title}
                     </p>
                     <p className={clsx(styles.subtitle, 't-subtitle')}>
                         {props.subtitle}
