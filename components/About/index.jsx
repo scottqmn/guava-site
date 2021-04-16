@@ -1,25 +1,29 @@
-import StyleGuide from '../Styleguide'
 import clsx from 'clsx'
+import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
-const About = () => {
+const About = (props) => {
     return (
         <div>
-            <h1 className={clsx(styles.title, 't-h2')}>About</h1>
+            <h1 className={clsx(styles.title, 't-h2')}>{props.heading}</h1>
             <div className={styles.container}>
                 <div className={styles.myImage}>
-                    <img src='images/guava-9.png' alt='Three guava fruit' />
+                    <img src={props.image} alt='Three guava fruit' />
                 </div>
                 <div className={styles.text}>
                     <p className={clsx(styles.caption, 't-h2')}>
-                        Guava is the three pals trying to make a living
+                        {props.caption}
                     </p>
                     <p className={clsx(styles.subtitle, 't-subtitle')}>
-                        Gonna make a website for whatever it is you want
+                        {props.subtitle}
                     </p>
                 </div>
             </div>
         </div>
     )
+}
+
+About.propTypes = {
+    content: PropTypes.string,
 }
 export default About

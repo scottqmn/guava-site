@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints';
+
 .title {
     display: flex;
     align-items: center;
@@ -13,10 +15,26 @@
     background-color: #3e3f43;
 }
 
-.container {
+/*.container {
     display: flex;
     align-items: center;
     color: #3e3f43;
+    @media (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+*/
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    color: #3e3f43;
+    @media (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .myImage {
@@ -25,6 +43,7 @@
     background-color: #f7dea6;
     width: 344px;
     height: 428px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,5 +60,6 @@
 }
 
 .text {
-    margin-left: 100px;
+    margin: 0 auto;
+    //justify-content: center;
 }
