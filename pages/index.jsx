@@ -1,7 +1,7 @@
 import HeroGrid from '../components/HeroGrid'
 import Menu from '../components/Menu'
 import About from '../components/About'
-import NewFooter from '../components/NewFooter'
+import NewFooter from '../components/NewFooter '
 
 // Page component (React component used by next js)
 const Home = () => {
