@@ -1,0 +1,27 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.text {
+    width: 375px;
+}
+
+.address {
+    width: 320px;
+    height: 40px;
+    border: solid 2px #daa520;
+}
+
+.button {
+    background-color: #daa520;
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 126px;
+}
+
+.subscribe {
+    margin-top: 30px;
+}
