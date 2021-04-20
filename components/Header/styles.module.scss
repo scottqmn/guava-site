@@ -1,7 +1,9 @@
+@import '../../styles/breakpoints';
+
 .container {
     background-color: rgba(255, 255, 255, 0.65);
     backdrop-filter: saturate(250%) blur(20px);
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
@@ -11,6 +13,10 @@
     left: 0;
     width: 100%;
     z-index: 1;
+
+    @media (min-width: $md) {
+        display: flex;
+    }
 }
 
 .logo {
