@@ -6,7 +6,6 @@ const NewFooter = () => {
     return (
         //outer and inner explanation?//
         <div className={styles.footer}>
-            <div className={styles.container}></div>
             <div className={styles.row}>
                 <a href='/about' className={styles.text}>
                     About
