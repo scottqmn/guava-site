@@ -1,0 +1,20 @@
+// Flex container
+.heading {
+    align-items: center;
+    display: flex;
+}
+
+// Flex child
+.title {
+    color: #3e3f43;
+}
+
+// Flex child
+.line {
+    border: 1px solid #3e3f43;
+    flex-grow: 1;
+}
+
+.img {
+    border-radius: 120px 0px 120px 0px;
+}
