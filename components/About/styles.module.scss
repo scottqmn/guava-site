@@ -20,16 +20,18 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr;
+    //how come the image doesnt take 1fr... how did i get them to stack that way if i put them in grid?
     grid-gap: 10px;
     color: #3e3f43;
     @media (min-width: $md) {
         grid-template-columns: repeat(2, 1fr);
+        //at the in width 1fr 1fr? which i get.. because then the text and image stack....
     }
 }
 
 .myImage {
     border: 2px solid #f7dea6;
-    border-radius: 0px 120px 0px 120px;
+    border-radius: 0px 120px;
     background-color: #f7dea6;
     max-width: 344px;
     height: 428px;
@@ -47,10 +49,4 @@
 .subtitle {
     max-width: 436px;
     margin-top: 20px;
-}
-
-.text {
-    //margin: 0 auto;
-    //grid-gap: ????????
-    //how to make centered with minimized?
 }
