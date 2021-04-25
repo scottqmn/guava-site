@@ -1,7 +1,7 @@
 import HeroGrid from '../components/HeroGrid'
 import Menu from '../components/Menu'
 import About from '../components/About'
-import Subscriber from '../components/Subscriber'
+import Subscription from '../components/Subscription'
 
 // Page component (React component used by next js)
 const Home = () => {
@@ -71,7 +71,7 @@ const Home = () => {
             <HeroGrid content={content} />
             <About />
             <Menu content={menuContent} />
-            <Subscriber />
+            <Subscription />
         </>
     )
 }

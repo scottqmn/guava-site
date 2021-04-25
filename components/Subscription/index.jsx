@@ -2,17 +2,13 @@ import StyleGuide from '../styleguide'
 import clsx from 'clsx'
 import styles from './styles.module.scss'
 
-//input is a self closing tag?
-const Subscriber = () => {
+const Subscription = ({ title, description }) => {
     return (
         <div className={styles.container}>
-            <div className={clsx(styles.subscribe, 't-h3')}>
-                Subscribe to our newsletter
-            </div>
+            <div className={clsx(styles.title, 't-h3')}>{title}</div>
             <div className={styles.row}>
-                <p className={clsx(styles.text, 't-button')}>
-                    A monthly digest of the new WOODIES products, hot offers,
-                    and resources.
+                <p className={clsx(styles.description, 't-button')}>
+                    {description}
                 </p>
                 <form>
                     <label>
@@ -31,4 +27,4 @@ const Subscriber = () => {
     )
 }
 
-export default Subscriber
+export default Subscription
