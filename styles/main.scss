@@ -28,6 +28,12 @@ body {
     background: var(--white);
 }
 
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
 *,
 *::before,
 *::after {
