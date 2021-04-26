@@ -22,6 +22,7 @@
     grid-template-columns: 1fr;
     //how come the image doesnt take 1fr... how did i get them to stack that way if i put them in grid?
     grid-gap: 10px;
+    min-width: 250px;
     color: #3e3f43;
     @media (min-width: $md) {
         grid-template-columns: repeat(2, 1fr);
@@ -44,9 +45,11 @@
 .caption {
     max-width: 436px;
     margin-bottom: 20px;
+    min-width: 200px;
 }
 
 .subtitle {
     max-width: 436px;
     margin-top: 20px;
+    min-width: 200px;
 }
