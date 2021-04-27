@@ -1,12 +1,17 @@
+@import '../../styles/breakpoints';
+
 // Flex container
 .heading {
     align-items: center;
     display: flex;
+    margin-top: 35px;
+    margin-bottom: 13px;
 }
 
 // Flex child
 .title {
     color: #3e3f43;
+    margin-right: 53px;
 }
 
 // Flex child
@@ -15,6 +20,41 @@
     flex-grow: 1;
 }
 
-.img {
+.grid {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+.imgWrap {
     border-radius: 120px 0px 120px 0px;
+    grid-column: 1 / -1;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: $md) {
+        grid-column: 1/5;
+    }
+}
+
+.img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.testimony {
+    border: solid red 2px;
+    border-radius: 0px 120px 0px 120px;
+    grid-column: 1/-1;
+    @media (min-width: $md) {
+        grid-column: 5/13;
+    }
 }
