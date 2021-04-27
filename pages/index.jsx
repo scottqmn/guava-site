@@ -69,7 +69,7 @@ const Home = () => {
     return (
         <>
             <HeroGrid content={content} />
-            <About />
+            {/*<About />*/}
             <Menu content={menuContent} />
             <NewFooter />
         </>
