@@ -17,16 +17,12 @@
 
 .container {
     display: grid;
-    align-items: center;
-    justify-content: center;
     grid-template-columns: 1fr;
-    //how come the image doesnt take 1fr... how did i get them to stack that way if i put them in grid?
     grid-gap: 10px;
-    min-width: 250px;
     color: #3e3f43;
+
     @media (min-width: $md) {
-        grid-template-columns: repeat(2, 1fr);
-        //at the in width 1fr 1fr? which i get.. because then the text and image stack....
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
@@ -34,22 +30,29 @@
     border: 2px solid #f7dea6;
     border-radius: 0px 120px;
     background-color: #f7dea6;
-    max-width: 344px;
     height: 428px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    @media (min-width: $md) {
+        grid-column: 1 / 6;
+    }
 }
 
-.caption {
-    max-width: 436px;
-    margin-bottom: 20px;
-    min-width: 200px;
+.imageSize {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
 }
 
-.subtitle {
-    max-width: 436px;
-    margin-top: 20px;
-    min-width: 200px;
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 20px;
+    @media (min-width: $md) {
+        grid-column: 7 / 12;
+    }
 }

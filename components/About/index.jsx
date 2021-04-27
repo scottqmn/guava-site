@@ -8,11 +8,17 @@ const About = ({ heading, image, title, subtitle }) => {
             <h1 className={clsx(styles.title, 't-h2')}>{heading}</h1>
             <div className={styles.container}>
                 <div className={styles.myImage}>
-                    <img src={image} alt='Three guava fruit' />
+                    {
+                        <img
+                            className={styles.imageSize}
+                            src={image}
+                            alt='Three guava fruit'
+                        />
+                    }
                 </div>
                 <div className={styles.text}>
-                    <p className={clsx(styles.caption, 't-h2')}>{title}</p>
-                    <p className={clsx(styles.subtitle, 't-subtitle')}>
+                    <p className={clsx(styles.text, 't-h2')}>{title}</p>
+                    <p className={clsx(styles.text, 't-subtitle')}>
                         {subtitle}
                     </p>
                 </div>
