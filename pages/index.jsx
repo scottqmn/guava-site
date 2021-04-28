@@ -69,9 +69,12 @@ const Home = () => {
     return (
         <>
             <HeroGrid content={content} />
-            <About />
+            {/*<About />*/}
             <Menu content={menuContent} />
-            <Subscription />
+            <Subscription
+                title='Subscribe to our newsletter'
+                description='A monthly digest of the new WOODIES products, hot offers, and resources'
+            />
         </>
     )
 }
