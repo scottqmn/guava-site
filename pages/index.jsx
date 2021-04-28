@@ -71,7 +71,6 @@ const Home = () => {
             <HeroGrid content={content} />
             {/*<About />*/}
             <Menu content={menuContent} />
-            <NewFooter />
         </>
     )
 }
