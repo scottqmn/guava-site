@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
             <div className='outer'>
                 <div className='inner'>{children}</div>
             </div>
+            <NewFooter />
             <Footer />
         </>
     )
