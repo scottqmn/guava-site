@@ -1,0 +1,29 @@
+.reviewWrap {
+    padding: 50px 90px;
+    border: solid #a8dcec 2px;
+    border-radius: 0px 120px 0 120px;
+    height: auto;
+}
+
+.star {
+    margin-bottom: 15px;
+}
+
+.review {
+    margin-bottom: 75px;
+}
+
+.userWrap {
+    display: flex;
+    align-items: center;
+}
+
+.userPic {
+    margin-right: 5px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    color: #afafaf;
+}

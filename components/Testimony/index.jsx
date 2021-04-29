@@ -1,19 +1,84 @@
+import { useState } from 'react'
 import clsx from 'clsx'
 import styles from './styles.module.scss'
 import Star from '../../public/icons/star.svg'
 
-const Testimony = () => {
+const DATA = [
+    {
+        star: 5,
+        review:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In eaque officiis molestiae repellat pariatur quibusdam corporis deleniti iure?',
+        user: {
+            icon: '/images/user.png',
+            name: 'Kona Geebo',
+            location: 'Los Angeles, CA',
+        },
+    },
+    {
+        star: 3,
+        review:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In eaque officiis molestiae repellat pariatur quibusdam corporis deleniti iure?',
+        user: {
+            icon: '/images/user.png',
+            name: 'Kanye Geebo',
+            location: 'Orange, CA',
+        },
+    },
+    {
+        star: 4,
+        review:
+            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In eaque officiis molestiae repellat pariatur quibusdam corporis deleniti iure?',
+        user: {
+            icon: '/images/user.png',
+            name: 'Penny Geebo',
+            location: 'SD, CA',
+        },
+    },
+]
+
+const Testimony = ({ data = DATA }) => {
+    const [activeIndex, setActiveIndex] = useState(0)
+
+    const handleNext = () => {
+        if (activeIndex < data.length - 1) {
+            setActiveIndex(activeIndex + 1)
+        }
+    }
+    const handlePrevious = () => {
+        if (activeIndex > 0) {
+            setActiveIndex(activeIndex - 1)
+        }
+    }
+
     return (
         <>
-            <div>
-                <div>
+            <div className={styles.reviewWrap}>
+                <div className={styles.star}>
                     <Star />
                 </div>
-                <div> review </div>
-                <div> picture</div>
+                <div className={styles.review}>{data[activeIndex].review}</div>
+                <div className={styles.userWrap}>
+                    <div className={styles.userPic}>
+                        <img
+                            src={data[activeIndex].user.icon}
+                            alt='profilepicture'
+                        />
+                    </div>
+                    <div className={styles.userInfo}>
+                        <div> {data[activeIndex].user.name}</div>
+                        <dov>{data[activeIndex].user.location}</dov>
+                    </div>
+                </div>
             </div>
             <div>
-                <div>previous</div>
+                <div>
+                    <button type='button' onClick={handlePrevious}>
+                        previous
+                    </button>
+                    <button type='button' onClick={handleNext}>
+                        next
+                    </button>
+                </div>
             </div>
         </>
     )
