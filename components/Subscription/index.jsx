@@ -7,10 +7,10 @@ const Subscription = ({ title, description }) => {
         <div className={styles.container}>
             <div className={clsx(styles.title, 't-h3')}>{title}</div>
             <div className={styles.row}>
-                <p className={clsx(styles.description, 't-button')}>
+                <div className={clsx(styles.description, 't-button')}>
                     {description}
-                </p>
-                <form>
+                </div>
+                <form className={styles.form}>
                     <label>
                         <input
                             className={styles.address}

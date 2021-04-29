@@ -1,25 +1,56 @@
+@import '../../styles/breakpoints';
+
+//row for description and form//
 .row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 20px 0px;
+    @media (min-width: $md) {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
 .description {
-    width: 375px;
+    padding: 10px 0px;
+    grid-template-columns: 1fr;
+    @media (min-width: $md) {
+        grid-column: 1 / 6;
+    }
+}
+
+.form {
+    grid-template-columns: 1fr;
+    padding: 10px 0px;
+    @media (min-width: $md) {
+        grid-column: 7 / -1;
+    }
 }
 
 .address {
-    width: 320px;
     height: 40px;
+    width: 100%;
     border: solid 2px #daa520;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px;
+    @media (min-width: $md) {
+        border-radius: 5px 0px 0px 5px;
+        width: 75%;
+    }
 }
 
 .button {
+    width: 100%;
     background-color: #daa520;
     color: white;
     text-align: center;
     height: 40px;
-    width: 126px;
+    padding: 0px 10px;
+    border-radius: 0px 0px 5px 5px;
+    @media (min-width: $md) {
+        border-radius: 0px 5px 5px 0px;
+        width: 25%;
+    }
 }
 
 .title {
