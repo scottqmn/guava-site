@@ -26,8 +26,9 @@ const Home = () => {
             <About
                 heading='About'
                 title='Guava is the three pal trying to make a living'
-                subtitle='Gonna make a website for what it is you want'
+                subtitle='Gonna make website for whatever it is you want'
                 image='/images/guava-9.png'
+                description='Three guava fruit'
             />
             <Menu content={menuContent} />
         </>

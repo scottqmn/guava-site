@@ -2,25 +2,23 @@ import clsx from 'clsx'
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
-const About = ({ heading, image, title, subtitle }) => {
+const About = ({ heading, image, description, title, subtitle }) => {
     return (
         <div>
             <h1 className={clsx(styles.title, 't-h2')}>{heading}</h1>
             <div className={styles.container}>
-                <div className={styles.myImage}>
+                <div className={styles.imageWrap}>
                     {
                         <img
-                            className={styles.imageSize}
+                            className={styles.image}
                             src={image}
-                            alt='Three guava fruit'
+                            alt={description}
                         />
                     }
                 </div>
                 <div className={styles.text}>
-                    <p className={clsx(styles.text, 't-h2')}>{title}</p>
-                    <p className={clsx(styles.text, 't-subtitle')}>
-                        {subtitle}
-                    </p>
+                    <p className='t-h2'>{title}</p>
+                    <p className='t-subtitle'>{subtitle}</p>
                 </div>
             </div>
         </div>
@@ -28,14 +26,10 @@ const About = ({ heading, image, title, subtitle }) => {
 }
 
 About.propTypes = {
-    content: PropTypes.arrayOf(
-        PropTypes.shape({
-            heading: PropTypes.string,
-            image: PropTypes.string,
-            title: PropTypes.string,
-            subtitle: PropTypes.string,
-        })
-    ),
+    heading: PropTypes.string,
+    image: PropTypes.string,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
 }
 
 export default About
