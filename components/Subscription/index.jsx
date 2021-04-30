@@ -1,5 +1,5 @@
-import StyleGuide from '../styleguide'
 import clsx from 'clsx'
+import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
 const Subscription = ({ title, description }) => {
@@ -27,4 +27,8 @@ const Subscription = ({ title, description }) => {
     )
 }
 
+Subscription.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+}
 export default Subscription

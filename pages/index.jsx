@@ -24,8 +24,7 @@ const Home = () => {
 
     return (
         <>
-            <HeroGrid content={content} />
-            {/*<About />*/}
+            {/*<About/>*/}
             <Menu content={menuContent} />
             <Subscription
                 title='Subscribe to our newsletter'
