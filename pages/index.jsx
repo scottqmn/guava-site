@@ -23,6 +23,7 @@ const Home = () => {
 
     return (
         <>
+<<<<<<< HEAD
             <About
                 heading='About'
                 title='Guava is the three pal trying to make a living'
@@ -30,6 +31,9 @@ const Home = () => {
                 image='/images/guava-9.png'
                 description='Three guava fruit'
             />
+=======
+            {/* <About /> */}
+>>>>>>> master
             <Menu content={menuContent} />
         </>
     )
