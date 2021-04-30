@@ -1,13 +1,18 @@
-module.exports = {
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
+const path = require('path')
 
-    return config
-  },
-  images: {
-    domains: ['picsum.photos'],
-  },
+module.exports = {
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        })
+
+        return config
+    },
+    images: {
+        domains: ['images.prismic.io', 'picsum.photos'],
+    },
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
+    },
 }

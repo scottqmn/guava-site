@@ -20,20 +20,8 @@
 
 html,
 body {
-    padding: 0;
-    margin: 0;
     font-family: var(--body);
     font-size: 18px;
     color: var(--black);
     background: var(--white);
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-*:focus:not(:focus-visible) {
-    outline: none;
 }

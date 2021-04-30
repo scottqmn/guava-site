@@ -1,46 +1,25 @@
-import Link from 'next/link'
-import clsx from 'clsx'
 import styles from './styles.module.scss'
 
 const Footer = () => {
-    const links = [
-        // { href: '', name: 'Copyright © All rights reserved.' },
-        { href: '/privacypolicy', name: 'Privacy Policy' },
-        { href: '/termsofuse', name: 'Terms of Use' },
-        { href: '/legal', name: 'Legal' },
-        // { herf: '/countryoforigin', name: 'United States' },
-    ]
     return (
-        <>
-            <div className={clsx(styles.outer, 'outer')}>
-                <div className={clsx(styles.container, 'inner')}>
-                    <div className={styles.wrap}>
-                        <div>Copyright © All rights reserved.</div>
-                        <div className={clsx(styles.linkContainer)}>
-                            {links.map((linkData) => {
-                                const { href, name } = linkData
-                                return (
-                                    <div key={name}>
-                                        {href ? (
-                                            <Link href={href}>
-                                                <a>{name}</a>
-                                            </Link>
-                                        ) : (
-                                            name
-                                        )}
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        <div>
-                            <Link href='/countryoforigin'>
-                                <a>USA</a>
-                            </Link>
-                        </div>
+        <div className='outer'>
+            <div className='inner'>
+                <div className={styles.footer}>
+                    <div className={styles.row}>
+                        <a href='/about' className={styles.text}>
+                            About
+                        </a>
+                        <a href='/work' className={styles.text}>
+                            Work
+                        </a>
+                        <a href='/contact' className={styles.text}>
+                            Contact
+                        </a>
                     </div>
+                    <div className={styles.copyright}>© 2021 Guava Site</div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
