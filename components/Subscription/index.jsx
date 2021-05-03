@@ -18,7 +18,10 @@ const Subscription = ({ title, description }) => {
                             placeholder='Your email address'
                         />
                     </label>
-                    <button className={clsx(styles.button, 't-body')}>
+                    <button
+                        type='button'
+                        className={clsx(styles.button, 't-body')}
+                    >
                         Subscribe
                     </button>
                 </form>
