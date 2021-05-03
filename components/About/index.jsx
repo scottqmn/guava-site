@@ -8,13 +8,11 @@ const About = ({ heading, image, description, title, subtitle }) => {
             <h1 className={clsx(styles.title, 't-h2')}>{heading}</h1>
             <div className={styles.container}>
                 <div className={styles.imageWrap}>
-                    {
-                        <img
-                            className={styles.image}
-                            src={image}
-                            alt={description}
-                        />
-                    }
+                    <img
+                        className={styles.image}
+                        src={image}
+                        alt={description}
+                    />
                 </div>
                 <div className={styles.text}>
                     <p className='t-h2'>{title}</p>
@@ -28,6 +26,7 @@ const About = ({ heading, image, description, title, subtitle }) => {
 About.propTypes = {
     heading: PropTypes.string,
     image: PropTypes.string,
+    description: PropTypes.string,
     title: PropTypes.string,
     subtitle: PropTypes.string,
 }
