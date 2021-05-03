@@ -1,5 +1,6 @@
 import Menu from '../components/Menu'
 import About from '../components/About'
+import Subscription from '../components/Subscription'
 
 // Page component (React component used by next js)
 const Home = () => {
@@ -23,8 +24,12 @@ const Home = () => {
 
     return (
         <>
-            {/* <About /> */}
+            {/*<About/>*/}
             <Menu content={menuContent} />
+            <Subscription
+                title='Subscribe to our newsletter'
+                description='A monthly digest of the new WOODIES products, hot offers, and resources'
+            />
         </>
     )
 }

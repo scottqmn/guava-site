@@ -1,4 +1,3 @@
-import StyleGuide from '../Styleguide'
 import clsx from 'clsx'
 import styles from './styles.module.scss'
 
