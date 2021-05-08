@@ -23,6 +23,10 @@ export const LINKS = [
         href: '/work',
         name: 'Work',
     },
+    {
+        href: '/products',
+        name: 'Products',
+    },
     { href: '/styleguide', name: 'Styleguide' },
     {
         href: '/contact',

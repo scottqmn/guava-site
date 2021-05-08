@@ -1,0 +1,22 @@
+.productList {
+    margin-top: 20px;
+}
+
+.productWrap {
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+}
+
+.product {
+    align-items: center;
+    display: flex;
+
+    img {
+        width: 100px;
+    }
+
+    .productTitle {
+        margin-left: 10px;
+    }
+}

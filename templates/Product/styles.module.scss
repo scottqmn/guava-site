@@ -1,0 +1,24 @@
+@import 'breakpoints';
+@import 'placeholders';
+
+.container {
+    @extend %grid;
+
+    margin-top: 20px;
+}
+
+.columnLeft {
+    grid-column: 1 / -1;
+
+    @media (min-width: $lg) {
+        grid-column: 1 / 4;
+    }
+}
+
+.columnRight {
+    grid-column: 1 / -1;
+
+    @media (min-width: $lg) {
+        grid-column: 5 / -1;
+    }
+}
