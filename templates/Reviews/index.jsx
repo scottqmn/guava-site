@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import reviewPropType from '../../prop-types/review'
 
 const Reviews = ({ reviews }) => {
+    console.log(reviews.length)
     return (
         <div>
             <h1 className='t-h1'>Reviews</h1>
