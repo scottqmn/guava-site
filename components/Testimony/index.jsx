@@ -52,30 +52,42 @@ const Testimony = ({ data = DATA }) => {
 
     return (
         <>
-            <div className={styles.reviewWrap}>
-                <div className={styles.star}>
-                    <Star />
-                </div>
-                <div className={styles.review}>{data[activeIndex].review}</div>
-                <div className={styles.userWrap}>
-                    <div className={styles.userPic}>
-                        <img
-                            src={data[activeIndex].user.icon}
-                            alt='profilepicture'
-                        />
+            <div className={styles.wrap}>
+                <div className={styles.reviewWrap}>
+                    <div className={styles.star}>
+                        {Array(data[activeIndex].star)
+                            .fill(0)
+                            .map((_, index) => (
+                                // eslint-disable-next-line react/no-array-index-key
+                                <Star key={index} />
+                            ))}
                     </div>
-                    <div className={styles.userInfo}>
-                        <div> {data[activeIndex].user.name}</div>
-                        <dov>{data[activeIndex].user.location}</dov>
+                    <div className={styles.review}>
+                        {data[activeIndex].review}
+                    </div>
+                    <div className={styles.userWrap}>
+                        <div className={styles.userPic}>
+                            <img
+                                src={data[activeIndex].user.icon}
+                                alt='profilepicture'
+                            />
+                        </div>
+                        <div className={styles.userInfo}>
+                            <div> {data[activeIndex].user.name}</div>
+                            <dov>{data[activeIndex].user.location}</dov>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div>
+
+                <div className={styles.button}>
                     <button type='button' onClick={handlePrevious}>
                         previous
                     </button>
-                    <button type='button' onClick={handleNext}>
+                    <button
+                        type='button'
+                        className={styles.arrowRight}
+                        onClick={handleNext}
+                    >
                         next
                     </button>
                 </div>
