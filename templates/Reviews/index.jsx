@@ -1,12 +1,24 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 import styles from './styles.module.scss'
 import reviewPropType from '../../prop-types/review'
 
 const Reviews = ({ reviews }) => {
     console.log(reviews.length)
+    const [page, setPage] = useState(0)
+    const nextPage = () => setPage(page + 1)
+    const backPage = () => setPage(page - 1)
+
     return (
         <div>
             <h1 className='t-h1'>Reviews</h1>
+            <button type='button' onClick={backPage} disabled={page === 0}>
+                previous
+            </button>
+            <div>page {page + 1}</div>
+            <button type='button' onClick={nextPage}>
+                next
+            </button>
             <ul className={styles.reviewList}>
                 {reviews.map(
                     ({
