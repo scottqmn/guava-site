@@ -1,0 +1,32 @@
+@import 'breakpoints';
+@import 'placeholders';
+
+.reviewList {
+    @extend %grid;
+
+    margin-top: 20px;
+}
+
+.review {
+    grid-column: 1/ -1;
+
+    @media (min-width: $md) {
+        grid-column: span 3;
+    }
+
+    @media (min-width: $lg) {
+        grid-column: span 4;
+    }
+
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+}
+
+.reviewIcon {
+    width: 50px;
+}
+
+.reviewTitle {
+    margin-left: 10px;
+}

@@ -20,8 +20,8 @@ export const LINKS = [
         name: 'About',
     },
     {
-        href: '/work',
-        name: 'Work',
+        href: '/reviews',
+        name: 'Reviews',
     },
     {
         href: '/products',
