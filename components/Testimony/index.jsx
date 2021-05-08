@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import clsx from 'clsx'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import styles from './styles.module.scss'
 import Star from '../../public/icons/star.svg'
 
@@ -11,7 +13,7 @@ const DATA = [
         user: {
             icon: '/images/user.png',
             name: 'Kona Geebo',
-            location: 'Los Angeles, CA',
+            location: 'Lakewood, CA',
         },
     },
     {
@@ -31,7 +33,7 @@ const DATA = [
         user: {
             icon: '/images/user.png',
             name: 'Penny Geebo',
-            location: 'SD, CA',
+            location: 'San Diego, CA',
         },
     },
 ]
@@ -81,14 +83,15 @@ const Testimony = ({ data = DATA }) => {
 
                 <div className={styles.button}>
                     <button type='button' onClick={handlePrevious}>
-                        previous
+                        {/* previous */}
+                        <ArrowBackIosIcon />
                     </button>
                     <button
                         type='button'
                         className={styles.arrowRight}
                         onClick={handleNext}
                     >
-                        next
+                        <ArrowForwardIosIcon />
                     </button>
                 </div>
             </div>
