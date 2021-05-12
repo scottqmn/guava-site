@@ -1,8 +1,23 @@
 import clsx from 'clsx'
 import styles from './styles.module.scss'
+import React, { useState } from 'react'
 import productPropType from '../../prop-types/product'
 
 const Product = ({ product }) => {
+    const [count, setCount] = useState(1)
+
+    function decrementCount() {
+        if (count > 1) {
+            setCount(count - 1)
+        }
+    }
+
+    function incrementCount() {
+        if (count < stock) {
+            setCount(count + 1)
+        }
+    }
+
     const { title, price, stock, image, description, vendor_url } = product
 
     return (
@@ -16,6 +31,23 @@ const Product = ({ product }) => {
                     <div>{description}</div>
                     <div>${price}</div>
                     <div>in stock: {stock}</div>
+                    <div className={styles.row}>
+                        <button
+                            className={styles.button}
+                            onClick={decrementCount}
+                            type='button'
+                        >
+                            -
+                        </button>
+                        <input placeholder={count} />
+                        <button
+                            className={styles.button}
+                            onClick={incrementCount}
+                            type='button'
+                        >
+                            +
+                        </button>
+                    </div>
                     <a href={vendor_url}>learn more</a>
                 </div>
             </div>
