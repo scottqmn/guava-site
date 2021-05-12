@@ -6,6 +6,7 @@ import productPropType from '../../prop-types/product'
 const Product = ({ product }) => {
     const [count, setCount] = useState(1)
 
+    // Good to check here but make sure to disable the button as well
     function decrementCount() {
         if (count > 1) {
             setCount(count - 1)
@@ -18,6 +19,33 @@ const Product = ({ product }) => {
         }
     }
 
+    // User can type in whatever they want (not checked with min and max yet)
+    const handleInputChange = (e) => {
+        /**
+         * e: change Event
+         * e.target: the input (target of the event)
+         * e.target.value: the value of the input (passed as a string)
+         */
+
+        // parseInt returns NaN if the input is blank,
+        // so '|| 0' turns the value to 0 in that case
+        const parsedValue = parseInt(e.target.value, 10) || 0
+        setCount(parsedValue)
+    }
+
+    // As user leaves input, value is checked against
+    // min and max and adjusted
+    const handleInputBlur = () => {
+        // No event e parameter like the change handler
+        // only because it isn't needed in this case
+        if (count < 1) {
+            setCount(1)
+        } else if (count > stock) {
+            setCount(stock)
+        }
+    }
+
+    // Move to top before any variables are used
     const { title, price, stock, image, description, vendor_url } = product
 
     return (
@@ -39,7 +67,15 @@ const Product = ({ product }) => {
                         >
                             -
                         </button>
-                        <input placeholder={count} />
+                        {/* Placeholders are typically used for inputs with any empty default value */}
+                        {/* In this case the default is 1 so no placeholder is necessary */}
+                        {/* <input placeholder={count} /> */}
+                        <input
+                            type='number'
+                            value={count}
+                            onChange={handleInputChange}
+                            onBlur={handleInputBlur}
+                        />
                         <button
                             className={styles.button}
                             onClick={incrementCount}
