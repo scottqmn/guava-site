@@ -8,6 +8,7 @@ const Reviews = ({ reviews }) => {
     const [page, setPage] = useState(0)
     const nextPage = () => setPage(page + 1)
     const backPage = () => setPage(page - 1)
+
     const pageArray = []
     let tempArray = []
     for (let i = 0; i < reviews.length; i += 1) {
@@ -24,13 +25,7 @@ const Reviews = ({ reviews }) => {
     return (
         <div>
             <h1 className='t-h1'>Reviews</h1>
-            <button type='button' onClick={backPage} disabled={page === 0}>
-                previous
-            </button>
-            <div>page {page + 1}</div>
-            <button type='button' onClick={nextPage}>
-                next
-            </button>
+
             <ul className={styles.reviewList}>
                 {pageArray[page].map(
                     ({
@@ -63,6 +58,15 @@ const Reviews = ({ reviews }) => {
                     }
                 )}
             </ul>
+            <div className={styles.buttonWrap}>
+                <button type='button' onClick={backPage} disabled={page === 0}>
+                    previous
+                </button>
+                <div className={styles.page}>page {page + 1}</div>
+                <button type='button' onClick={nextPage}>
+                    next
+                </button>
+            </div>
         </div>
     )
 }
