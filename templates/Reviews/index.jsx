@@ -8,6 +8,18 @@ const Reviews = ({ reviews }) => {
     const [page, setPage] = useState(0)
     const nextPage = () => setPage(page + 1)
     const backPage = () => setPage(page - 1)
+    const pageArray = []
+    let tempArray = []
+    for (let i = 0; i < reviews.length; i += 1) {
+        if (tempArray.length === 10) {
+            pageArray.push(tempArray)
+            tempArray = []
+        }
+        tempArray.push(reviews[i])
+    }
+    if (tempArray.length > 0) {
+        pageArray.push(tempArray)
+    }
 
     return (
         <div>
@@ -20,7 +32,7 @@ const Reviews = ({ reviews }) => {
                 next
             </button>
             <ul className={styles.reviewList}>
-                {reviews.map(
+                {pageArray[page].map(
                     ({
                         id,
                         icon,
