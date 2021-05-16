@@ -8,6 +8,9 @@
 }
 
 .review {
+    border: solid black 1px;
+    border-radius: 100px 5px 100px 5px;
+    padding: 30px;
     grid-column: 1/ -1;
 
     @media (min-width: $md) {

@@ -9,6 +9,10 @@ const Reviews = ({ reviews }) => {
     const nextPage = () => setPage(page + 1)
     const backPage = () => setPage(page - 1)
 
+    //use state to make true or false go back and forth, hiding reviews
+    const [hideReviews, setHideReviews] = useState(false)
+    const toggleReviews = () => setHideReviews(!hideReviews)
+
     const pageArray = []
     let tempArray = []
     for (let i = 0; i < reviews.length; i += 1) {
