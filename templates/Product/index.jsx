@@ -6,6 +6,9 @@ import productPropType from '../../prop-types/product'
 const Product = ({ product }) => {
     const [count, setCount] = useState(1)
 
+    // Move to top before any variables are used
+    const { title, price, stock, image, description, vendor_url } = product
+
     // Good to check here but make sure to disable the button as well
     function decrementCount() {
         if (count > 1) {
@@ -45,9 +48,6 @@ const Product = ({ product }) => {
         }
     }
 
-    // Move to top before any variables are used
-    const { title, price, stock, image, description, vendor_url } = product
-
     return (
         <div>
             <h1 className={clsx(styles.title, 't-h1')}>{title}</h1>
@@ -61,22 +61,22 @@ const Product = ({ product }) => {
                     <div>in stock: {stock}</div>
                     <div className={styles.row}>
                         <button
+                            disabled={count === 1}
                             className={styles.button}
                             onClick={decrementCount}
                             type='button'
                         >
                             -
                         </button>
-                        {/* Placeholders are typically used for inputs with any empty default value */}
-                        {/* In this case the default is 1 so no placeholder is necessary */}
-                        {/* <input placeholder={count} /> */}
                         <input
+                            className={styles.input}
                             type='number'
                             value={count}
                             onChange={handleInputChange}
                             onBlur={handleInputBlur}
                         />
                         <button
+                            disabled={count === stock}
                             className={styles.button}
                             onClick={incrementCount}
                             type='button'
